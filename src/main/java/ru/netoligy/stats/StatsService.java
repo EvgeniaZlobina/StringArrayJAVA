@@ -1,6 +1,7 @@
 package ru.netoligy.stats;
 
-public class StatsService {
+public class StatsService {// сумма продаж
+
     public int SummaSales(int[] sales) {
         int summa = 0;
 
@@ -10,7 +11,7 @@ public class StatsService {
         return summa;
     }
 
-    public int AverageSummaSales(int[] sales) {
+    public int AverageSummaSales(int[] sales) {// средняя сумма продаж
         int summa = 0;
         int average;
         int count = 0;
@@ -22,7 +23,7 @@ public class StatsService {
         return average;
     }
 
-    public int maxSales(int[] sales) {
+    public int maxSales(int[] sales) { // номер месяца с максимальными продажами
         int maxMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[maxMonth]) { //в i месяце меньше
@@ -32,7 +33,7 @@ public class StatsService {
         return maxMonth;
     }
 
-    public int minSales(int[] sales) {
+    public int minSales(int[] sales) {// номер месяца с минимальными продажами
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[minMonth]) { //в i месяце меньше
@@ -42,7 +43,7 @@ public class StatsService {
         return minMonth;
     }
 
-    public int minAverageSales(int[] sales) {
+    public int minAverageSales(int[] sales) {// количество месяцев в которых продажи ниже среднего
         int minaverage = AverageSummaSales(sales);
         int count = 0;
         for (int i = 0; i < sales.length; i++) {
@@ -53,7 +54,7 @@ public class StatsService {
         return count;
     }
 
-    public int maxAverageSales(int[] sales) {
+    public int maxAverageSales(int[] sales) {// // количество месяцев в которых продажи выше среднего
         int maxaverage = AverageSummaSales(sales);
         int count = 0;
         for (int i = 0; i < sales.length; i++) {
