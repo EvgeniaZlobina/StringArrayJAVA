@@ -5,7 +5,7 @@ public class Main {
         StatsService Service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int summaIncome = Service.SummaSales(sales); // сумма продаж
-        System.out.println(summaIncome);
+        System.out.println(summaIncome + " сумма продаж");
 
         int summaAveragle = Service.AverageSummaSales(sales); // средняя сумма продаж
         System.out.println(summaAveragle);

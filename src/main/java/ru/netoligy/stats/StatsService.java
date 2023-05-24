@@ -30,7 +30,7 @@ public class StatsService {// сумма продаж
                 maxMonth = i; //запомним как максимальный
             }
         }
-        return maxMonth;
+        return maxMonth+1;
     }
 
     public int minSales(int[] sales) {// номер месяца с минимальными продажами
@@ -40,7 +40,7 @@ public class StatsService {// сумма продаж
                 minMonth = i; //запомним как минимальный
             }
         }
-        return minMonth;
+        return minMonth+1;
     }
 
     public int minAverageSales(int[] sales) {// количество месяцев в которых продажи ниже среднего
